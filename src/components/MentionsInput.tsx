@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { setCaretToEnd, createSpanDiv } from "./utils";
 import "./MentionsInput.css";
 
@@ -11,7 +11,7 @@ function MentionsInput(props: MentionsInputPropType) {
   const [showSuggestion, setShowSuggestion] = useState(false);
   const main_text_area = document.getElementById("main-text-area");
   const main_text_areaRef = useRef(null);
-  const handleSuggestionClick = (name: string, id: number) => {
+  const handleSuggestionClick = (name: string) => {
     createSpanDiv(name, main_text_area);
     setCaretToEnd(main_text_areaRef?.current);
     // @ts-ignore
@@ -72,7 +72,7 @@ function MentionsInput(props: MentionsInputPropType) {
                     } transition-all ease-in-out duration-500 focus:bg-[#c4c4c4] `}
                     key={index}
                     onClick={() => {
-                      handleSuggestionClick(user.name, user.id);
+                      handleSuggestionClick(user.name);
                     }}
                   >
                     <img
