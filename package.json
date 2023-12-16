@@ -1,7 +1,7 @@
 {
   "name": "react-mentions-input-latest",
   "private": false,
-  "version": "0.0.6",
+  "version": "0.0.7",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,13 +11,27 @@
   },
   "main": "./dist/MentionsInput.umd.js",
   "module": "./dist/MentionsInput.es.js",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "types": "./types/MentionsInput.d.ts",
   "exports": {
     ".": {
       "import": "./dist/MentionsInput.es.js",
       "require": "./dist/MentionsInput.umd.js"
     }
+  },
+  "homepage": "https://github.com/slim-python/React-Mentions-Input",
+  "description": "A react input mentions component with tagging feature ",
+  "author": {
+    "name": "Abhi Raj"
+  },
+  "keywords": [
+    "react input mentions",
+    "react mentions",
+    "React-mentions input"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/slim-python/React-Mentions-Input.git"
   },
   "dependencies": {
     "@vitejs/plugin-react-swc": "^3.5.0",
