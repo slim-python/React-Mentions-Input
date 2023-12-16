@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useRef, useState } from "react";
 import { setCaretToEnd, createSpanDiv } from "./utils";
 import "./MentionsInput.css";
@@ -6,7 +7,7 @@ interface MentionsInputPropType {
   data: any;
   trigger: string;
 }
-function MentionsInput(props: MentionsInputPropType) {
+const MentionsInput = (props: MentionsInputPropType) => {
   const { data: UsersList, trigger } = props;
   const [showSuggestion, setShowSuggestion] = useState(false);
   const main_text_area = document.getElementById("main-text-area");
@@ -102,6 +103,6 @@ function MentionsInput(props: MentionsInputPropType) {
       </div>
     </div>
   );
-}
+};
 
 export default MentionsInput;

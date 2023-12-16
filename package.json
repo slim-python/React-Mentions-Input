@@ -1,16 +1,26 @@
 {
   "name": "react-mentions-input-latest",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.0.6",
   "type": "module",
-  "main": "src/components/MentionsInput.tsx",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
+  "main": "./dist/MentionsInput.umd.js",
+  "module": "./dist/MentionsInput.es.js",
+  "license": "MIT",
+  "types": "./types/MentionsInput.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/MentionsInput.es.js",
+      "require": "./dist/MentionsInput.umd.js"
+    }
+  },
   "dependencies": {
+    "@vitejs/plugin-react-swc": "^3.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

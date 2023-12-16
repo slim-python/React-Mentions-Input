@@ -1,3 +1,16 @@
+
+!dist
+!types
+!package.json
+!README.md
+!LICENSE
+src
+screenshot.png
+tsconfig.json
+tsconfig.node.json
+vite.config.ts
+yarn.lock
+
 # Logs
 logs
 *.log
@@ -8,9 +21,6 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-types
-dist
-dist-ssr
 *.local
 
 # Editor directories and files
